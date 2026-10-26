@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Лабораторная работа: CSS-анимации 7, 8, 9 и 19. День и ночь, стрелки, маятник Ньютона и петушок из HTML и CSS.">
+  <meta name="author" content="Верниченко Иван, ИВТ-5">
+  <meta name="theme-color" content="#183f4c">
+  <title>Лаборатория движения — анимации 7, 8, 9 и 19</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Перейти к анимациям</a>
+  <header class="header">
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">↗</span> MOTION<span>LAB</span></a>
+    <nav aria-label="Выбор анимации"><a href="#animation-7">07 <span>День / ночь</span></a><a href="#animation-8">08 <span>Стрелки</span></a><a href="#animation-9">09 <span>Маятник</span></a><a href="#animation-19">19 <span>Петушок</span></a></nav>
+  </header>
+  <main id="main">
+    <div class="intro" id="top"><p class="eyebrow">ЛАБОРАТОРНАЯ РАБОТА · HTML + CSS</p><h1>Маленькие сцены.<br><em>Живое движение.</em></h1><p>Четыре интерактивные анимации. Нажимайте, наводите курсор<br class="desktop-break"> и наблюдайте, как простые формы меняют характер.</p><div class="author">Верниченко Иван <span>·</span> ИВТ-5</div></div>
+    <div class="lab-grid">
+      <section class="demo-card" id="animation-7" aria-labelledby="title-7">
+        <div class="card-heading"><span class="number">07</span><div><p class="eyebrow">ПОСЛЕДОВАТЕЛЬНОЕ ПРЕВРАЩЕНИЕ</p><h2 id="title-7">От солнца до звёзд</h2></div><span class="kind">CLICK</span></div>
+        <div class="demo-stage day-stage">
+          <button class="sky-switch" id="sky-switch" type="button" aria-pressed="false" aria-label="Переключить день на ночь">
+            <span class="sky-art" aria-hidden="true"><span class="sky-halo halo-one"></span><span class="sky-halo halo-two"></span><span class="celestial"><span class="crater crater-one"></span><span class="crater crater-two"></span><span class="crater crater-three"></span></span><span class="cloud"><span></span></span><span class="stars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></span>
+          </button>
+          <p class="stage-hint">Нажмите на переключатель</p>
+        </div>
+        <div class="card-copy"><p>Солнце и облако уходят влево. Затем появляется луна, загораются звёзды и темнеет небо.</p><div class="controls"><button class="control secondary" id="sky-reset" type="button">Вернуть день</button><span class="status" id="sky-status" role="status" aria-live="polite">День · исходное состояние</span></div><details><summary>Этапы анимации</summary><ol><li>0–0,8 с: солнце и облако перемещаются влево.</li><li>0,8–1,4 с: солнце становится луной с кратерами, облако исчезает.</li><li>1,4–1,8 с: справа появляются точки-звёзды.</li><li>1,8–2,4 с: меняются фон и обводка.</li><li>Повторное нажатие возвращает исходный день.</li></ol></details></div>
+      </section>
+      <section class="demo-card" id="animation-8" aria-labelledby="title-8">
+        <div class="card-heading"><span class="number">08</span><div><p class="eyebrow">НАВЕДЕНИЕ И ПЕРЕЛИСТЫВАНИЕ</p><h2 id="title-8">Стрелка ↔ полоска</h2></div><span class="kind">HOVER</span></div>
+        <div class="demo-stage slider-stage">
+          <div class="slider" id="slider" role="region" aria-roledescription="карусель" aria-label="Демонстрационные кадры">
+            <div class="slide-window"><div class="slide-track" id="slide-track">
+              <article class="slide slide-one" aria-label="Кадр 1 из 5"><span class="scene-orb"></span><span class="scene-hill hill-a"></span><span class="scene-hill hill-b"></span><div class="slide-caption"><span>01 / ИСТОК</span><h3>У каждого пути<br>есть начало.</h3></div></article>
+              <article class="slide slide-two" aria-label="Кадр 2 из 5" aria-hidden="true"><span class="scene-orb"></span><span class="scene-hill hill-a"></span><span class="scene-hill hill-b"></span><div class="slide-caption"><span>02 / НАПРАВЛЕНИЕ</span><h3>Один шаг —<br>новый пейзаж.</h3></div></article>
+              <article class="slide slide-three" aria-label="Кадр 3 из 5" aria-hidden="true"><span class="scene-orb"></span><span class="scene-hill hill-a"></span><span class="scene-hill hill-b"></span><div class="slide-caption"><span>03 / СЕРЕДИНА</span><h3>Самое интересное<br>в движении.</h3></div></article>
+              <article class="slide slide-four" aria-label="Кадр 4 из 5" aria-hidden="true"><span class="scene-orb"></span><span class="scene-hill hill-a"></span><span class="scene-hill hill-b"></span><div class="slide-caption"><span>04 / ГОРИЗОНТ</span><h3>Продолжайте<br>смотреть вперёд.</h3></div></article>
+              <article class="slide slide-five" aria-label="Кадр 5 из 5" aria-hidden="true"><span class="scene-orb"></span><span class="scene-hill hill-a"></span><span class="scene-hill hill-b"></span><div class="slide-caption"><span>05 / ФИНИШ</span><h3>Конец — повод<br>начать сначала.</h3></div></article>
+            </div></div>
+            <div class="slider-bottom"><button class="arrow-button is-edge" id="slide-prev" type="button" disabled aria-label="Предыдущий кадр"><span class="arrow-icon left-arrow" aria-hidden="true"><span class="shaft"></span><span class="wing wing-top"></span><span class="wing wing-bottom"></span></span></button><div class="slide-dots" role="group" aria-label="Выбрать кадр"><button type="button" data-slide="0" aria-label="Кадр 1" aria-current="true"></button><button type="button" data-slide="1" aria-label="Кадр 2"></button><button type="button" data-slide="2" aria-label="Кадр 3"></button><button type="button" data-slide="3" aria-label="Кадр 4"></button><button type="button" data-slide="4" aria-label="Кадр 5"></button></div><button class="arrow-button" id="slide-next" type="button" aria-label="Следующий кадр"><span class="arrow-icon" aria-hidden="true"><span class="shaft"></span><span class="wing wing-top"></span><span class="wing wing-bottom"></span></span></button></div>
+          </div>
+        </div>
+        <div class="card-copy"><p>При наведении края стрелки сходятся к центру. На границе галереи стрелка превращается в полупрозрачную полоску.</p><div class="controls"><button class="control secondary" id="slide-reset" type="button">К началу</button><span class="status" id="slide-status" role="status" aria-live="polite">Кадр 1 из 5 · начало</span></div><details><summary>Как проверить</summary><ol><li>На первом кадре левая кнопка — полоска с прозрачностью 0,5.</li><li>Перейдите ко второму: полоска раскрывается в стрелку, прозрачность становится 1.</li><li>Наведите курсор или переведите фокус на доступную стрелку: её края сужаются.</li><li>На пятом кадре правая стрелка складывается в полоску с прозрачностью 0,5.</li></ol><p>Клавиатура: <kbd>←</kbd> / <kbd>→</kbd>, <kbd>Home</kbd> и <kbd>End</kbd> внутри галереи.</p></details></div>
+      </section>
+      <section class="demo-card" id="animation-9" aria-labelledby="title-9">
+        <div class="card-heading"><span class="number">09</span><div><p class="eyebrow">ИМПУЛЬС И ЗАТУХАНИЕ</p><h2 id="title-9">Маятник Ньютона</h2></div><span class="kind">CLICK</span></div>
+        <div class="demo-stage cradle-stage">
+          <button id="cradle" class="cradle" type="button" aria-label="Запустить колебания шариков слева направо">
+            <span class="cradle-apparatus" aria-hidden="true"><span class="cradle-frame"></span><span class="frame-leg frame-left"></span><span class="frame-leg frame-right"></span><span class="cradle-base"></span><span class="pendulums"><span class="pendulum pendulum-left"><span class="wire"></span><span class="ball"></span></span><span class="pendulum"><span class="wire"></span><span class="ball"></span></span><span class="pendulum"><span class="wire"></span><span class="ball"></span></span><span class="pendulum"><span class="wire"></span><span class="ball"></span></span><span class="pendulum pendulum-right"><span class="wire"></span><span class="ball"></span></span></span></span>
+          </button>
+          <div class="cradle-progress" aria-hidden="true"><span id="cradle-progress"></span></div><p class="stage-hint">Нажмите на группу шариков</p>
+        </div>
+        <div class="card-copy"><p>Первый шар отклоняется слева, возвращается и передаёт движение правому. Угол уменьшается, а колебания замедляются.</p><div class="controls"><button class="control" id="cradle-start" type="button">Запустить</button><button class="control secondary" id="cradle-pause" type="button" disabled>Пауза</button><button class="icon-control" id="cradle-reset" type="button" aria-label="Вернуть шарики в покой">↺</button><span class="status" id="cradle-status" role="status" aria-live="polite">Покой</span></div><details><summary>Что происходит</summary><ol><li>До нажатия все пять шариков неподвижны.</li><li>Левый шар отклоняется на 44°, затем возвращается.</li><li>Правый шар отклоняется в противоположную сторону и возвращается.</li><li>Следующие пары колебаний: 30°, 17° и 6°. Продолжительность каждого колебания растёт.</li><li>Через 14 секунд движение полностью останавливается. Повторное нажатие на шарики запускает цикл заново.</li></ol><p>Это стилизованная демонстрация затухания, а не физический расчёт.</p></details></div>
+      </section>
+      <section class="demo-card" id="animation-19" aria-labelledby="title-19">
+        <div class="card-heading"><span class="number">19</span><div><p class="eyebrow">ПЕРСОНАЖ ИЗ HTML И CSS</p><h2 id="title-19">Петушок оживает</h2></div><span class="kind">CSS ART</span></div>
+        <div class="demo-stage rooster-stage">
+          <figure class="rooster-scene" id="rooster-scene" aria-label="Петушок из CSS: тёмное туловище и хвост, светлая шея, красные гребешок и бородка, жёлтые клюв и лапки">
+            <div class="rooster" aria-hidden="true">
+              <div class="leg leg-back"><span class="foot"><i></i></span></div><div class="leg leg-front"><span class="foot"><i></i></span></div>
+              <div class="tail"><span class="feather feather-low"></span><span class="feather feather-mid"></span><span class="feather feather-high"></span></div>
+              <div class="body-shape"><span class="chest-shade"></span><span class="wing-shape"></span></div>
+              <div class="head-group"><div class="neck"><span class="neck-shade"></span></div><div class="comb"><span></span><span></span><span></span><span></span><span></span><i></i></div><div class="beak beak-top"></div><div class="beak beak-bottom"></div><div class="wattle"></div><div class="eye"></div></div>
+              <div class="hip"></div>
+            </div>
+            <figcaption class="rooster-caption">Ни одной картинки в персонаже — только формы CSS.</figcaption>
+          </figure>
+        </div>
+        <div class="card-copy"><p>Петушок покачивает головой, дышит, машет крылом и хвостом, переступает лапками и открывает клюв.</p><div class="controls"><button class="control" id="rooster-toggle" type="button" aria-pressed="false">Оживить петушка</button><button class="control secondary" id="rooster-reset" type="button">Исходная поза</button><span class="status" id="rooster-status" role="status" aria-live="polite">Статичный персонаж</span></div><details><summary>Части персонажа и образец</summary><ul><li>Туловище — дыхание; крыло — взмах.</li><li>Голова и шея — наклон; глаз — моргание.</li><li>Гребешок и бородка — отдельные покачивания.</li><li>Клюв — открывание; хвост и каждое перо — движение веером.</li><li>Лапки и ступни — попеременное переступание.</li></ul><figure class="reference"><img src="assets/reference-rooster.png" width="300" height="315" loading="lazy" alt="Предоставленный образец петушка: светлая шея, красный гребень и тёмное туловище на синем фоне"><figcaption>Образец из задания. Растровое изображение используется только для сравнения.</figcaption></figure></details></div>
+      </section>
+    </div>
+    <aside class="motion-note"><span aria-hidden="true">◌</span><p>Все движения созданы CSS-переходами и ключевыми кадрами. JavaScript только переключает состояния и кадры. Если в системе включено уменьшение движения, длительные анимации сокращаются.</p></aside>
+  </main>
+  <footer class="footer"><span>MOTION LAB <b>·</b> Анимации 7 / 8 / 9 / 19</span><span>Верниченко Иван · ИВТ-5</span><a href="#top">Наверх ↑</a></footer>
+</body>
+</html>

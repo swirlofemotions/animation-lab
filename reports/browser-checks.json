@@ -1,0 +1,99 @@
+{
+  "initialCradle": {
+    "leftTransform": "matrix(1, 0, 0, 1, 0, 0)",
+    "running": false
+  },
+  "cradleStarted": {
+    "duration": "14s",
+    "name": "left-swing",
+    "transform": "matrix(0.979219, 0.202805, -0.202805, 0.979219, 0, 0)"
+  },
+  "middleSlide": {
+    "status": "Кадр 2 из 5",
+    "prevEnabled": true,
+    "prevClass": "arrow-button"
+  },
+  "endSlide": {
+    "status": "Кадр 5 из 5 · конец",
+    "nextEnabled": false,
+    "nextClass": "arrow-button is-edge"
+  },
+  "roosterRunning": {
+    "names": [
+      "rooster-bob",
+      "leg-back",
+      "foot-step",
+      "leg-front",
+      "foot-step",
+      "tail-wag",
+      "feather-low",
+      "feather-mid",
+      "feather-high",
+      "body-breathe",
+      "wing-flap",
+      "head-nod",
+      "comb-wiggle",
+      "beak-open-top",
+      "beak-open-bottom",
+      "wattle-sway",
+      "eye-blink",
+      "hip-bob"
+    ],
+    "rasterCharacters": 0
+  },
+  "night": {
+    "background": "rgb(36, 50, 78)",
+    "border": "rgb(89, 107, 140)",
+    "cloudOpacity": "0",
+    "craterOpacity": "1",
+    "moonLeft": "17px",
+    "pressed": "true",
+    "starsOpacity": "1"
+  },
+  "cradlePause": {
+    "state": "paused",
+    "transform": "matrix(1, 0, 0, 1, 0, 0)"
+  },
+  "roosterPause": {
+    "state": "paused"
+  },
+  "roosterReset": "none",
+  "cradleFinished": {
+    "status": "Покой · колебания затихли",
+    "running": false,
+    "transform": "matrix(1, 0, 0, 1, 0, 0)"
+  },
+  "dayReturn": {
+    "background": "rgb(167, 212, 230)",
+    "cloud": "1",
+    "pressed": "false",
+    "stars": "0"
+  },
+  "responsive": [
+    {
+      "cards": 4,
+      "scrollWidth": 305,
+      "viewport": 320
+    },
+    {
+      "cards": 4,
+      "scrollWidth": 753,
+      "viewport": 768
+    },
+    {
+      "cards": 4,
+      "scrollWidth": 985,
+      "viewport": 1000
+    },
+    {
+      "cards": 4,
+      "scrollWidth": 1265,
+      "viewport": 1280
+    }
+  ],
+  "keyboardArrowFocus": {
+    "focused": true,
+    "wingTransform": "matrix(0.939693, 0.34202, -0.34202, 0.939693, 0, 0)"
+  },
+  "console": []
+}
